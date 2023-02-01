@@ -17,7 +17,7 @@ aircraftVehicles.ForEach(x => x.Fly(x.Name));
 // Build a collection of all vehicles that operate on roads
 List<Car> carVehicles = new List<Car>()
 {
-    new Corolla("corolla 1"),
+    new Corolla("corolla 1"){BatteryCapacity = 85},
     new NissanLeaf("nissan leaf 1")
 };
 // With a single `foreach`, have each road vehicle Drive()
