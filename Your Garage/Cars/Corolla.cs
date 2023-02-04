@@ -1,9 +1,22 @@
-﻿namespace Your_Garage.Cars;
+﻿using Your_Garage.Interfaces;
 
-public class Corolla : Car
+namespace Your_Garage.Cars;
+
+public class Corolla : Vehicle, IGround
 {
+    public int BatteryCapacity { get; set; }
     public Corolla(string name)
     {
         Name = name;
+    }
+
+    public void Drive()
+    {
+        Console.WriteLine($"{Name} Corolla driving.");
+    }
+
+    public void Brake()
+    {
+        Console.WriteLine($"{Name} Corolla braking.");
     }
 }
